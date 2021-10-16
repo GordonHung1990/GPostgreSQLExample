@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using GPostgreSQLExample.Repositories.Models.Players;
 using GPostgreSQLExample.Services;
@@ -31,7 +29,6 @@ namespace GPostgreSQLExample.Controllers
             [FromServices] IPlayersService service,
             Guid id)
             => service.GetAsync(id);
-
 
         /// <summary>
         /// Posts the specified service.
