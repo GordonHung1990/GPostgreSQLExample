@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPostgreSQLExample", "GPostgreSQLExample\GPostgreSQLExample.csproj", "{34331456-65DD-4EAE-9E3C-60AD1B69D3A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2DC8CD15-DCC2-4B84-89A6-74CAA4BDBECC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPostgreSQLExample.Repositories", "GPostgreSQLExample.Repositories\GPostgreSQLExample.Repositories.csproj", "{FD301206-234D-449D-8B50-5FB482832A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPostgreSQLExample.Services", "GPostgreSQLExample.Services\GPostgreSQLExample.Services.csproj", "{D5F5D263-3351-49AD-9296-54D524D9AF42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPostgreSQLExample.Repositories.UnitTest", "GPostgreSQLExample.Repositories.UnitTest\GPostgreSQLExample.Repositories.UnitTest.csproj", "{90C55813-8825-46A0-890C-8FC3C32FED62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPostgreSQLExample.Services.UnitTest", "GPostgreSQLExample.Services.UnitTest\GPostgreSQLExample.Services.UnitTest.csproj", "{3131C8F7-8E41-4AD0-80B4-21914EB14B99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34331456-65DD-4EAE-9E3C-60AD1B69D3A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34331456-65DD-4EAE-9E3C-60AD1B69D3A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34331456-65DD-4EAE-9E3C-60AD1B69D3A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34331456-65DD-4EAE-9E3C-60AD1B69D3A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD301206-234D-449D-8B50-5FB482832A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD301206-234D-449D-8B50-5FB482832A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD301206-234D-449D-8B50-5FB482832A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD301206-234D-449D-8B50-5FB482832A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5F5D263-3351-49AD-9296-54D524D9AF42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5F5D263-3351-49AD-9296-54D524D9AF42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5F5D263-3351-49AD-9296-54D524D9AF42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5F5D263-3351-49AD-9296-54D524D9AF42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90C55813-8825-46A0-890C-8FC3C32FED62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90C55813-8825-46A0-890C-8FC3C32FED62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90C55813-8825-46A0-890C-8FC3C32FED62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90C55813-8825-46A0-890C-8FC3C32FED62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3131C8F7-8E41-4AD0-80B4-21914EB14B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3131C8F7-8E41-4AD0-80B4-21914EB14B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3131C8F7-8E41-4AD0-80B4-21914EB14B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3131C8F7-8E41-4AD0-80B4-21914EB14B99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C62DFA53-0135-46A8-ABBF-1758DDC752A0}
+	EndGlobalSection
+EndGlobal

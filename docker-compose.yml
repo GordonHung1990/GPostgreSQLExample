@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:12.8
+    container_name: "postgresql-example-postgres"
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "1qaz2wsx"
+      POSTGRES_DB: example
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+  pg_data:

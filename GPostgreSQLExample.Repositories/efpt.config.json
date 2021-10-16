@@ -1,0 +1,45 @@
+﻿{
+  "CodeGenerationMode": 0,
+  "ContextClassName": "MainContext",
+  "ContextNamespace": "Entities",
+  "DefaultDacpacSchema": null,
+  "FilterSchemas": true,
+  "IncludeConnectionString": false,
+  "ModelNamespace": "Entities",
+  "OutputContextPath": "Entities\/Main",
+  "OutputPath": "Entities\/Main\/Models",
+  "ProjectRootNamespace": "GPostgreSQLExample.Repositories",
+  "Schemas": [
+    {
+      "Name": "main"
+    }
+  ],
+  "SelectedHandlebarsLanguage": 0,
+  "SelectedToBeGenerated": 0,
+  "Tables": [
+    {
+      "Name": "main.players",
+      "ObjectType": 0
+    },
+    {
+      "Name": "main.PlayerInfos",
+      "ObjectType": 0
+    }
+  ],
+  "UiHint": ".example",
+  "UseBoolPropertiesWithoutDefaultSql": true,
+  "UseDatabaseNames": false,
+  "UseDbContextSplitting": true,
+  "UseFluentApiOnly": false,
+  "UseHandleBars": false,
+  "UseInflector": true,
+  "UseLegacyPluralizer": false,
+  "UseNoConstructor": false,
+  "UseNoDefaultConstructor": false,
+  "UseNoNavigations": false,
+  "UseNoObjectFilter": false,
+  "UseNodaTime": false,
+  "UseNullableReferences": true,
+  "UseSchemaFolders": false,
+  "UseSpatial": false
+}
