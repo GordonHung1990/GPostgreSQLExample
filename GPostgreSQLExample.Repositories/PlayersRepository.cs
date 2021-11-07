@@ -32,8 +32,10 @@ namespace GPostgreSQLExample.Repositories
             var playerInfo = _mapper.Map<PlayerInfo>(source);
             var playerId = Guid.NewGuid();
             var systTime = DateTimeOffset.UtcNow;
+            player.PlayerId = playerId;
             player.CreateTime = systTime.DateTime;
             player.ModifyTime = systTime.DateTime;
+            playerInfo.PlayerId = playerId;
             _ = await _mainContext.Players.AddAsync(player).ConfigureAwait(false);
             _ = await _mainContext.PlayerInfos.AddAsync(playerInfo).ConfigureAwait(false);
             _ = await _mainContext.SaveChangesAsync().ConfigureAwait(false);

@@ -1,7 +1,15 @@
-﻿using GPostgreSQLExample.Repositories.Entities;
+﻿using System;
+using System.Data;
+using System.Linq;
+using System.Threading.Tasks;
+using GPostgreSQLExample.Repositories.Entities;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.Configuration;
+
 
 namespace GPostgreSQLExample.Repositories.Migrations
 {
