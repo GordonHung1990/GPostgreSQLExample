@@ -21,6 +21,7 @@ namespace GPostgreSQLExample.Repositories.Entities
 
         public virtual DbSet<Player> Players { get; set; }
         public virtual DbSet<PlayerInfo> PlayerInfos { get; set; }
+        public virtual DbSet<PlayerRecord> PlayerRecords { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,6 +29,7 @@ namespace GPostgreSQLExample.Repositories.Entities
 
             modelBuilder.ApplyConfiguration(new Configurations.PlayerConfiguration());
             modelBuilder.ApplyConfiguration(new Configurations.PlayerInfoConfiguration());
+            modelBuilder.ApplyConfiguration(new Configurations.PlayerRecordConfiguration());
             OnModelCreatingPartial(modelBuilder);
         }
 
