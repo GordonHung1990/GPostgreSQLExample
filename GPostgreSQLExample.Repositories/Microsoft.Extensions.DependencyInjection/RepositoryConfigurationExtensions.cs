@@ -23,7 +23,8 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 config.AddProfile<PlayersAutoMapp>();
             });
-            return services.AddTransient<IPlayersRepository, PlayersRepository>();
+            return services
+                .AddTransient<IPlayersRepository, PlayersRepository>();
         }
     }
 }

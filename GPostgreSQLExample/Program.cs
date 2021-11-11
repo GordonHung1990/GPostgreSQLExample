@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using GPostgreSQLExample.Repositories;
 using GPostgreSQLExample.Repositories.Entities;
 using GPostgreSQLExample.Repositories.Migrations;
 using Microsoft.AspNetCore.Hosting;
@@ -30,30 +31,15 @@ namespace GPostgreSQLExample
 
         private static async Task ExecuteMigrationsAndSeedingsAsync(IServiceProvider services)
         {
-            var configBuilder = new ConfigurationBuilder();
-            configBuilder
-                .AddJsonFile("appsettings.json");
-            var config = configBuilder.Build();
-
-            var builder = new DbContextOptionsBuilder<MainContext>();
-            var connectionString = config.GetConnectionString("Default");
-
-            builder.UseNpgsql(connectionString);
-
-            using (var context = new MainContext(builder.Options))
+            using (var scope = services.CreateScope())
             {
-                var pendingMigrations = await context.Database.GetPendingMigrationsAsync();
-
-                if (pendingMigrations.Any())
-                {
-                    Console.WriteLine($"You have {pendingMigrations.Count()} pending migrations to apply.");
-                    Console.WriteLine("Applying pending migrations now");
-                    await context.Database.MigrateAsync();
-                }
-
-                var lastAppliedMigration = (await context.Database.GetAppliedMigrationsAsync()).Last();
-
-                Console.WriteLine($"You're on schema version: {lastAppliedMigration}");
+                var serviceProvider = scope.ServiceProvider;
+                var env = serviceProvider.GetRequiredService<IWebHostEnvironment>();
+                var builder = new DbContextOptionsBuilder<MainContext>();
+                builder.UseNpgsql(serviceProvider.GetRequiredService<IConfiguration>().GetConnectionString("Default"));
+                var mainContext = new MainContext(builder.Options);
+                IMainContextInitialization mainContextInitialization = new MainContextInitialization(mainContext);
+                await mainContextInitialization.InitializationAsync(env);
             }
         }
     }
